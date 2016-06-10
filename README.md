@@ -19,7 +19,7 @@ meteor remove blaze-html-templates
 meteor add angular2-compilers barbatus:angular2-runtime 
 ````
 
-Next we add the angular2-meteor, the @angular and the latest meteor-node-stubs npm packages. 
+Next we add the @angular, the latest meteor-node-stubs and the angular2-meteor npm packages. 
 ````
 meteor npm install --save @angular/compiler @angular/core @angular/common
 meteor npm install --save meteor-node-stubs
