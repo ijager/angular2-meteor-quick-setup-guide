@@ -11,7 +11,23 @@ meteor create [project]
 cd [project]
 ````
 
-Inside the project root we add `tsconfig.json` for the typescript compiler
+Inside the project we first have to remove blaze and add the angular2-meteor compilers and runtime
+````
+meteor remove blaze-html-templates
+meteor add angular2-compilers barbatus:angular2-runtime 
+````
+
+Next we add the angular2-meteor npm packages and the @angular packages
+````
+meteor npm install --save angular2-meteor angular2-meteor-auto-bootstrap angular2-meteor-polyfills
+meteor npm install --save @angular/compiler @angular/core @angular/common
+````
+After this we still need to install some npm packages from package.json
+````
+meteor npm install
+````
+
+In the project root we need to add `tsconfig.json` for the typescript compiler with the following inside.
 
 ````
 {
@@ -37,6 +53,8 @@ Inside the project root we add `tsconfig.json` for the typescript compiler
   ]
 }
 ````
+
+
 
 
 
