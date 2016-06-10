@@ -45,25 +45,15 @@ In the project root we need to add `tsconfig.json` for the typescript compiler w
 ````
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "module": "commonjs",
     "target": "es5",
-    "isolatedModules": false,
+    "module": "commonjs",
     "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
-    "sourceMap": true
-  },
-  "filesGlob": [
-    "client/**/*.ts",
-    "server/**/*.ts",
-    "typings/**/*.d.ts",
-    "collections/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "noImplicitAny": false
+  }
 }
 ````
 
