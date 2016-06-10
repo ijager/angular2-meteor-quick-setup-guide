@@ -97,3 +97,7 @@ export class AppComponent {}
 <app>Loading...</app>
 </body>
 ````
+
+If we now run `meteor` the browser should show Hello World on [http://localhost:3000](http://localhost:3000)
+
+** Typings **
