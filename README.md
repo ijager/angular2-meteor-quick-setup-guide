@@ -11,6 +11,8 @@ meteor create [project]
 cd [project]
 ````
 
+## Packages
+
 Inside the project we first have to remove blaze and add the angular2-meteor compilers and runtime
 ````
 meteor remove blaze-html-templates
@@ -26,6 +28,18 @@ meteor npm install --save meteor-node-stubs
 After this do another meteor npm install to check if everything from package.json has been installed
 ````
 meteor npm install
+````
+
+## Files
+
+Now we're ready to create a Angular2 style app. 
+
+First get rid of these placeholder files:
+````
+- /client/main.css (delete)
+- /client/main.html (delete)
+- /client/main.js (delete)
+- /server/main.js (delete)
 ````
 
 In the project root we need to add `tsconfig.json` for the typescript compiler with the following inside.
