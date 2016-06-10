@@ -100,7 +100,7 @@ If we now run `meteor` the browser should show Hello World on [http://localhost:
 
 ## Typings
 
-To enable Typescript typechecking we have to install typings for our dependencies.
+To enable Typescript type checking we have to install typings for our dependencies.
 If you haven't already, install typings globally and make sure its version is >= 1.04.
 ````
 sudo npm install typings -g
