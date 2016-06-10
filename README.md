@@ -2,9 +2,9 @@
 
 Guide to quickly setup a angular2-meteor project.
 
-This guide is based on the [official angular2-meteor tutorial](https://www.angular-meteor.com/tutorials/socially/angular2/bootstrapping) and on information from various issues. 
+This guide is based on the [official angular2-meteor tutorial](https://www.angular-meteor.com/tutorials/socially/angular2/bootstrapping), on the [Angular2 Hereos tutorial](https://angular.io/docs/ts/latest/tutorial/)  and on information from various issues. 
 
-First we create our meteor project
+First we create our meteor project.
 
 ````
 meteor create [project]
@@ -13,19 +13,19 @@ cd [project]
 
 ## Packages
 
-Inside the project we first have to remove blaze and add the angular2-meteor compilers and runtime
+Inside the project we first have to remove blaze and add the angular2-meteor compilers and runtime.
 ````
 meteor remove blaze-html-templates
 meteor add angular2-compilers barbatus:angular2-runtime 
 ````
 
-Next we add the angular2-meteor, the @angular and the latest meteor-node-stubs npm packages 
+Next we add the angular2-meteor, the @angular and the latest meteor-node-stubs npm packages. 
 ````
 meteor npm install --save angular2-meteor angular2-meteor-auto-bootstrap angular2-meteor-polyfills
 meteor npm install --save @angular/compiler @angular/core @angular/common
 meteor npm install --save meteor-node-stubs
 ````
-After this do another meteor npm install to check if everything from package.json has been installed
+After this do another meteor npm install to check if everything from package.json has been installed.
 ````
 meteor npm install
 ````
@@ -36,10 +36,10 @@ Now we're ready to create a Angular2 style app.
 
 First get rid of these placeholder files:
 ````
-- /client/main.css (delete)
-- /client/main.html (delete)
-- /client/main.js (delete)
-- /server/main.js (delete)
+- client/main.css (delete)
+- client/main.html (delete)
+- client/main.js (delete)
+- server/main.js (delete)
 ````
 
 In the project root we need to add `tsconfig.json` for the typescript compiler with the following inside.
@@ -69,7 +69,31 @@ In the project root we need to add `tsconfig.json` for the typescript compiler w
 }
 ````
 
+now add `client/main.ts`, `client/app.component.ts` and `client/index.html`.
 
+*client/main.ts*
+````
+import { bootstrap } from 'angular2-meteor-auto-bootstrap';
 
+import { AppComponent } from './app.component';
 
+bootstrap(AppComponent);
+````
 
+*client/app.component.ts*
+````
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app',
+  template: 'Hello World'
+})
+export class AppComponent {}
+````
+
+*client/index.html*
+````
+<body>
+<app>Loading...</app>
+</body>
+````
