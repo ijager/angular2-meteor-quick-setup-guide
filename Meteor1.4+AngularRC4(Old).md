@@ -1,4 +1,4 @@
-# Angular2.0 Meteor Quick Setup Guide
+# Angular2.0 Meteor Quick Setup Guide (Meteor1.4+AngularRC4)
 
 This guide will help you quickly setup an angular2-meteor project. It is based on the [official angular2-meteor tutorial](https://www.angular-meteor.com/tutorials/socially/angular2/bootstrapping), on the [Angular2 Hereos tutorial](https://angular.io/docs/ts/latest/tutorial/)  and on information from various issues. 
 
