@@ -1,19 +1,25 @@
+# Minimal Meteor + Angular 2.0.0 Project
 
-tsconfig.json:
+This guide shows how to create a minimal Meteor project with Angular 2.0.0 dependencies. This project does not make use of angular2-meteor glue. 
+
+## Create Project
+
+First we create our meteor project.
+
 ````
-{
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
-  }
-}
-```
+meteor create [project]
+cd [project]
+````
+
+## Packages
+
+Inside the project we first have to remove blaze and add the `angular2-compilers` package (typescript compiler).
+````
+meteor remove blaze-html-templates
+meteor add angular2-compilers
+````
+
+Add the following `package.json` to the root of your project and run `meteor npm install`. This should install all necessary NPM packages.
 
 package.json:
 ````
@@ -37,6 +43,10 @@ package.json:
   }
 }
 ````
+
+# Source Files
+
+Next we add the following source files to the client folder. Don't forget to first remove all existing `*.js` files. 
 
 client/index.html:
 ````
@@ -87,4 +97,22 @@ import { AppModule } from './app.module';
 const platform = platformBrowserDynamic();
 
 platform.bootstrapModule(AppModule);
+````
+
+Finally, add `tsconfig.json` for the typescript compiler and run `meteor`
+
+tsconfig.json:
+````
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  }
+}
 ````
