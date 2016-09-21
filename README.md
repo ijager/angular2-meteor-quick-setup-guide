@@ -19,9 +19,8 @@ meteor add angular2-compilers barbatus:angular2-runtime
 
 Next we add the @angular, the latest meteor-node-stubs and the angular2-meteor npm packages. 
 ````
-meteor npm install --save @angular/compiler @angular/core @angular/common
-meteor npm install --save meteor-node-stubs
-meteor npm install --save angular2-meteor angular2-meteor-auto-bootstrap angular2-meteor-polyfills
+meteor npm install --save rxjs@5.0.0-beta.12 zone.js@^0.6.21 meteor-node-stubs @angular/compiler @angular/core @angular/common
+(meteor npm install --save angular2-meteor angular2-meteor-auto-bootstrap angular2-meteor-polyfills) // if you want to use the angular2-meteor package
 ````
 After this do another meteor npm install to check if everything from package.json has been installed, but everything should be there already.
 ````
